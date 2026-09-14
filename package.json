@@ -1,0 +1,38 @@
+{
+  "name": "pi-config",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "keywords": [
+    "pi-package"
+  ],
+  "dependencies": {
+    "@dietrichgebert/ponytail": "4.9.0",
+    "@juicesharp/rpiv-ask-user-question": "2.10.1",
+    "pi-subagents": "0.67.0",
+    "pi-tick": "0.1.2"
+  },
+  "peerDependencies": {
+    "@earendil-works/pi-agent-core": "*",
+    "@earendil-works/pi-ai": "*",
+    "@earendil-works/pi-coding-agent": "*",
+    "@earendil-works/pi-tui": "*",
+    "typebox": "*"
+  },
+  "pi": {
+    "extensions": [
+      "node_modules/@juicesharp/rpiv-ask-user-question/index.ts",
+      "node_modules/pi-tick/extensions/tick",
+      "node_modules/@dietrichgebert/ponytail/pi-extension/index.js",
+      "node_modules/pi-subagents/index.ts"
+    ],
+    "skills": [
+      "./skills",
+      "node_modules/@dietrichgebert/ponytail/skills",
+      "node_modules/pi-subagents/skills"
+    ],
+    "prompts": [
+      "node_modules/pi-subagents/prompts"
+    ]
+  }
+}
